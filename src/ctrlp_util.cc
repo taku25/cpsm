@@ -100,7 +100,7 @@ void get_highlight_regexes(boost::string_ref const mode,
     // - "\ze": ends the match
     // - characters in the item after the match
     // - "\$": end of string
-    std::string regex = R"(\V\C\^)";
+    std::string regex = R"(\V\C\^\.{-})";
     auto const write_char = [&](char c) {
       if (c == '\\') {
         regex += R"(\\)";
